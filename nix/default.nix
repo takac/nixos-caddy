@@ -12,7 +12,7 @@
 
   caddy-version =  removePrefix "v" info.version;
   cloudflare-version-string = splitString "-" (removePrefix "v" info.cfVersion);
-  cloudflare-version = elemAt cloudflare-version-string 0 + "+" + elemAt cloudflare-version-string 2;
+  cloudflare-version = elemAt cloudflare-version-string 0;
 
   ddns-version-string = splitString "-" (removePrefix "v" info.ddnsVersion);
   ddns-version = elemAt ddns-version-string 0 + "+" + elemAt ddns-version-string 2;
